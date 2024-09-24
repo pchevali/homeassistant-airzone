@@ -1,5 +1,5 @@
 {
-  "name": "AirZone",
+  "name": "AirZoneLocal",
   "render_readme": true,
   "iot_class": "Local Polling"
 }

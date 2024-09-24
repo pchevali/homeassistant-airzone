@@ -1,6 +1,6 @@
-DOMAIN = "airzone"
+DOMAIN = "airzonelocal"
 DEFAULT_DEVICE_ID = 1
-DEFAULT_DEVICE_CLASS = 'innobus'
+DEFAULT_DEVICE_CLASS = "innobus"
 DEFAULT_SPEED_AS_PER = False
 SYSTEM_TYPES = ["innobus", "aidoo", "localapi"]
 
@@ -25,64 +25,71 @@ from homeassistant.components.climate.const import (
 )
 
 ### Innobus Extra Attributes
-ATTR_IS_ZONE_GRID_OPENED = 'is_zone_grid_opened'
-ATTR_IS_GRID_MOTOR_ACTIVE = 'is_grid_motor_active'
-ATTR_IS_GRID_MOTOR_REQUESTED = 'is_grid_motor_requested'
-ATTR_IS_FLOOR_ACTIVE = 'is_floor_active'
-ATTR_LOCAL_MODULE_FANCOIL = 'get_local_module_fancoil'
-ATTR_IS_REQUESTING_AIR = 'is_requesting_air'
-ATTR_IS_OCCUPIED = 'is_occupied'
-ATTR_IS_WINDOWS_OPENED = 'is_window_opened'
-ATTR_FANCOIL_SPEED = 'get_fancoil_speed'
-ATTR_PROPORTIONAL_APERTURE = 'get_proportional_aperture'
-ATTR_TACTO_CONNECTED = 'is_tacto_connected_cz'
-ATTR_IS_AUTOMATIC_MODE = 'is_automatic_mode'
-ATTR_IS_TACTO_ON = 'is_tacto_on'
-ATTR_DIF_CURRENT_TEMP = 'get_dif_current_temp'
+ATTR_IS_ZONE_GRID_OPENED = "is_zone_grid_opened"
+ATTR_IS_GRID_MOTOR_ACTIVE = "is_grid_motor_active"
+ATTR_IS_GRID_MOTOR_REQUESTED = "is_grid_motor_requested"
+ATTR_IS_FLOOR_ACTIVE = "is_floor_active"
+ATTR_LOCAL_MODULE_FANCOIL = "get_local_module_fancoil"
+ATTR_IS_REQUESTING_AIR = "is_requesting_air"
+ATTR_IS_OCCUPIED = "is_occupied"
+ATTR_IS_WINDOWS_OPENED = "is_window_opened"
+ATTR_FANCOIL_SPEED = "get_fancoil_speed"
+ATTR_PROPORTIONAL_APERTURE = "get_proportional_aperture"
+ATTR_TACTO_CONNECTED = "is_tacto_connected_cz"
+ATTR_IS_AUTOMATIC_MODE = "is_automatic_mode"
+ATTR_IS_TACTO_ON = "is_tacto_on"
+ATTR_DIF_CURRENT_TEMP = "get_dif_current_temp"
 
 AVAILABLE_ATTRIBUTES_ZONE = {
-    ATTR_IS_ZONE_GRID_OPENED: 'is_zone_grid_opened',
-    ATTR_IS_GRID_MOTOR_ACTIVE: 'is_grid_motor_active',
-    ATTR_IS_GRID_MOTOR_REQUESTED: 'is_grid_motor_requested',
-    ATTR_IS_FLOOR_ACTIVE: 'is_floor_active',
-    ATTR_LOCAL_MODULE_FANCOIL: 'get_local_module_fancoil',
-    ATTR_IS_REQUESTING_AIR: 'is_requesting_air',
-    ATTR_IS_OCCUPIED: 'is_occupied',
-    ATTR_IS_WINDOWS_OPENED: 'is_window_opened',
-    ATTR_FANCOIL_SPEED: 'get_fancoil_speed',
-    ATTR_PROPORTIONAL_APERTURE: 'get_proportional_aperture',
-    ATTR_TACTO_CONNECTED: 'is_tacto_connected_cz',
-    ATTR_IS_AUTOMATIC_MODE: 'is_automatic_mode',
-    ATTR_IS_TACTO_ON: 'is_tacto_on',
-    ATTR_DIF_CURRENT_TEMP: 'get_dif_current_temp'
+    ATTR_IS_ZONE_GRID_OPENED: "is_zone_grid_opened",
+    ATTR_IS_GRID_MOTOR_ACTIVE: "is_grid_motor_active",
+    ATTR_IS_GRID_MOTOR_REQUESTED: "is_grid_motor_requested",
+    ATTR_IS_FLOOR_ACTIVE: "is_floor_active",
+    ATTR_LOCAL_MODULE_FANCOIL: "get_local_module_fancoil",
+    ATTR_IS_REQUESTING_AIR: "is_requesting_air",
+    ATTR_IS_OCCUPIED: "is_occupied",
+    ATTR_IS_WINDOWS_OPENED: "is_window_opened",
+    ATTR_FANCOIL_SPEED: "get_fancoil_speed",
+    ATTR_PROPORTIONAL_APERTURE: "get_proportional_aperture",
+    ATTR_TACTO_CONNECTED: "is_tacto_connected_cz",
+    ATTR_IS_AUTOMATIC_MODE: "is_automatic_mode",
+    ATTR_IS_TACTO_ON: "is_tacto_on",
+    ATTR_DIF_CURRENT_TEMP: "get_dif_current_temp",
 }
 
 ZONE_HVAC_MODES = [HVAC_MODE_AUTO, HVAC_MODE_HEAT_COOL, HVAC_MODE_OFF]
-PRESET_SLEEP = 'SLEEP'
+PRESET_SLEEP = "SLEEP"
 ZONE_PRESET_MODES = [PRESET_NONE, PRESET_SLEEP]
-ZONE_FAN_MODES = {FAN_AUTO: 'AUTOMATIC', FAN_LOW: 'SPEED_1', FAN_MEDIUM: 'SPEED_2', FAN_HIGH: 'SPEED_3'}
-ZONE_FAN_MODES_R = dict(zip(ZONE_FAN_MODES.values(),ZONE_FAN_MODES.keys()))
+ZONE_FAN_MODES = {
+    FAN_AUTO: "AUTOMATIC",
+    FAN_LOW: "SPEED_1",
+    FAN_MEDIUM: "SPEED_2",
+    FAN_HIGH: "SPEED_3",
+}
+ZONE_FAN_MODES_R = dict(zip(ZONE_FAN_MODES.values(), ZONE_FAN_MODES.keys()))
 ZONE_SUPPORT_FLAGS = SUPPORT_TARGET_TEMPERATURE | SUPPORT_FAN_MODE | SUPPORT_PRESET_MODE
 
 MACHINE_HVAC_MODES = [HVAC_MODE_FAN_ONLY, HVAC_MODE_HEAT, HVAC_MODE_COOL, HVAC_MODE_OFF]
-PRESET_AIR_MODE = 'AIRE'
-PRESET_FLOOR_MODE = 'FLOOR'
+PRESET_AIR_MODE = "AIRE"
+PRESET_FLOOR_MODE = "FLOOR"
 MACHINE_PRESET_MODES = [PRESET_AIR_MODE, PRESET_FLOOR_MODE]
 MACHINE_SUPPORT_FLAGS = SUPPORT_AUX_HEAT | SUPPORT_PRESET_MODE
 
 # LocalAPI Modes
 
 LOCALAPI_ZONE_HVAC_MODES = [HVAC_MODE_HEAT_COOL, HVAC_MODE_OFF]
-LOCALAPI_ZONE_SUPPORT_FLAGS =  SUPPORT_TARGET_TEMPERATURE
+LOCALAPI_ZONE_SUPPORT_FLAGS = SUPPORT_TARGET_TEMPERATURE
 
-LOCALAPI_MACHINE_SUPPORT_FLAGS =  SUPPORT_FAN_MODE
+LOCALAPI_MACHINE_SUPPORT_FLAGS = SUPPORT_FAN_MODE
 
-LOCALAPI_MACHINE_HVAC_MODES = [HVAC_MODE_OFF, 
-                            HVAC_MODE_COOL, 
-                            HVAC_MODE_HEAT, 
-                            HVAC_MODE_FAN_ONLY, 
-                            HVAC_MODE_DRY,
-                            HVAC_MODE_AUTO] 
+LOCALAPI_MACHINE_HVAC_MODES = [
+    HVAC_MODE_OFF,
+    HVAC_MODE_COOL,
+    HVAC_MODE_HEAT,
+    HVAC_MODE_FAN_ONLY,
+    HVAC_MODE_DRY,
+    HVAC_MODE_AUTO,
+]
 
 
 LOCALAPI_HVAC_MODE_MAP = {
@@ -91,46 +98,47 @@ LOCALAPI_HVAC_MODE_MAP = {
     HVAC_MODE_HEAT: OperationMode.HEATING,
     HVAC_MODE_FAN_ONLY: OperationMode.FAN,
     HVAC_MODE_DRY: OperationMode.DRY,
-    HVAC_MODE_AUTO: OperationMode.AUTO
+    HVAC_MODE_AUTO: OperationMode.AUTO,
 }
 
 LOCALAPI_MODE_TO_HVAC_MAP = {
-    'STOP': HVAC_MODE_OFF,
-    'COOLING': HVAC_MODE_COOL,
-    'AUTO': HVAC_MODE_AUTO,
-    'HEATING': HVAC_MODE_HEAT,
-    'FAN': HVAC_MODE_FAN_ONLY,
-    'DRY': HVAC_MODE_DRY
+    "STOP": HVAC_MODE_OFF,
+    "COOLING": HVAC_MODE_COOL,
+    "AUTO": HVAC_MODE_AUTO,
+    "HEATING": HVAC_MODE_HEAT,
+    "FAN": HVAC_MODE_FAN_ONLY,
+    "DRY": HVAC_MODE_DRY,
 }
 
 
-
-#AIDO extra modes
+# AIDO extra modes
 
 CONF_SPEED_PERCENTAGE = "speed_as_percentage"
 
-AIDO_HVAC_MODES = [HVAC_MODE_AUTO, 
-                HVAC_MODE_FAN_ONLY, 
-                HVAC_MODE_HEAT, 
-                HVAC_MODE_COOL, 
-                HVAC_MODE_OFF, 
-                HVAC_MODE_DRY]
+AIDO_HVAC_MODES = [
+    HVAC_MODE_AUTO,
+    HVAC_MODE_FAN_ONLY,
+    HVAC_MODE_HEAT,
+    HVAC_MODE_COOL,
+    HVAC_MODE_OFF,
+    HVAC_MODE_DRY,
+]
 
-#TODO: SWING_MODES =Louvres?
+# TODO: SWING_MODES =Louvres?
 AIDO_SUPPORT_FLAGS = SUPPORT_TARGET_TEMPERATURE | SUPPORT_FAN_MODE
 
 AIDO_HVAC_MODE_MAP = {
-    HVAC_MODE_COOL:'COOLING',
-    HVAC_MODE_AUTO:'AUTO',
-    HVAC_MODE_HEAT:'HEATING',
-    HVAC_MODE_FAN_ONLY:'FAN',
-    HVAC_MODE_DRY:'DRY'
+    HVAC_MODE_COOL: "COOLING",
+    HVAC_MODE_AUTO: "AUTO",
+    HVAC_MODE_HEAT: "HEATING",
+    HVAC_MODE_FAN_ONLY: "FAN",
+    HVAC_MODE_DRY: "DRY",
 }
 
 AIDO_MODE_TO_HVAC_MAP = {
-    'COOLING': HVAC_MODE_COOL,
-    'AUTO': HVAC_MODE_AUTO,
-    'HEATING': HVAC_MODE_HEAT,
-    'FAN': HVAC_MODE_FAN_ONLY,
-    'DRY': HVAC_MODE_DRY
+    "COOLING": HVAC_MODE_COOL,
+    "AUTO": HVAC_MODE_AUTO,
+    "HEATING": HVAC_MODE_HEAT,
+    "FAN": HVAC_MODE_FAN_ONLY,
+    "DRY": HVAC_MODE_DRY,
 }
