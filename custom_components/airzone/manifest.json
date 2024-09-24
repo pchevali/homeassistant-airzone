@@ -5,7 +5,7 @@
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/gpulido/homeassistant-airzone",
-  "domain": "airzonelocal",
+  "domain": "airzone",
   "name": "AirZoneLocal",
   "requirements": [
     "python-airzone==0.15.1"
