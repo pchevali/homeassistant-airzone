@@ -6,8 +6,8 @@
   "domain": "airzone",
   "name": "AirZone",
   "requirements": [
-    "python-airzone @ git+https://github.com/pchevali/python-airzone.git"    
+    "git+https://github.com/pchevali/python-airzone.git@master#egg=python-airzone"    
   ],
-  "version": "1.9.1",
+  "version": "1.9.2",
   "iot_class": "local_polling"
 }
